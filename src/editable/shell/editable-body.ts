@@ -14,7 +14,7 @@ export function getEditableBodyProps(): EditableBodyProps {
   const { recipe, brandPack } = getFactoryState()
 
   return {
-    dataSiteShell: recipe.homeLayout,
+    dataSiteShell: `${recipe.homeLayout}-premium-library`,
     dataMotionPack: recipe.motionPack,
     className: `${brandPack.bodyClassName} ${brandPack.fontClassName} ${brandPack.paletteClassName}`,
     style: editableRootStyle,

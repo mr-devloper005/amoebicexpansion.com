@@ -11,5 +11,6 @@ export async function generateMetadata({ params }: { params: Promise<{ username:
 }
 
 export default async function ProfileDetailPage({ params }: { params: Promise<{ username: string }> }) {
+  // Shared detail route keeps the redesigned layout centralized.
   return <EditableTaskDetailRoute task="profile" params={params} />
 }

@@ -11,6 +11,7 @@ export async function ClassifiedPageTaskPage({
   searchParams?: Promise<{ category?: string; page?: string }>
   basePath?: string
 }) {
+  // Shared archive route keeps the redesigned layout centralized.
   return <EditableTaskArchiveRoute task="classified" searchParams={searchParams} basePath={basePath} />
 }
 
