@@ -11,6 +11,7 @@ export async function ImagesPageTaskPage({
   searchParams?: Promise<{ category?: string; page?: string }>
   basePath?: string
 }) {
+  // Shared archive route keeps the redesigned layout centralized.
   return <EditableTaskArchiveRoute task="image" searchParams={searchParams} basePath={basePath} />
 }
 

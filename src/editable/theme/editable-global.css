@@ -1,25 +1,33 @@
-/*
-  Editable global theme layer.
-
-  Safe for UI editors / AI tools:
-  - Full site background
-  - Global text color
-  - Selection color
-  - Scrollbar feel
-  - Article body typography accents
-
-  Do not add data fetching, scripts, or route logic here.
-*/
-
 body {
   background-color: var(--slot4-page-bg) !important;
   color: var(--slot4-page-text) !important;
   background-image: var(--slot4-body-gradient) !important;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-serif {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  transition-property: color, background-color, border-color, transform, box-shadow, opacity;
 }
 
 ::selection {
-  background: color-mix(in oklab, var(--slot4-accent-fill) 22%, transparent);
+  background: color-mix(in oklab, var(--slot4-accent-bright) 58%, white);
   color: var(--slot4-page-text);
+}
+
+::-webkit-scrollbar {
+  width: 11px;
 }
 
 ::-webkit-scrollbar-track {
@@ -27,18 +35,46 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: color-mix(in oklab, var(--slot4-accent) 40%, transparent);
+  background: color-mix(in oklab, var(--slot4-accent) 55%, transparent);
   border-radius: 999px;
+  border: 2px solid color-mix(in oklab, var(--slot4-page-bg) 88%, white);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: color-mix(in oklab, var(--slot4-accent) 62%, transparent);
+  background: color-mix(in oklab, var(--slot4-page-text) 68%, transparent);
 }
 
-.article-content h2 {
-  color: var(--slot4-accent);
+.article-content {
+  color: color-mix(in oklab, var(--slot4-page-text) 84%, white);
+}
+
+.article-content p + p {
+  margin-top: 1.35rem;
+}
+
+.article-content h2,
+.article-content h3 {
+  margin-top: 2rem;
+  color: var(--slot4-page-text);
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 .article-content a {
-  color: var(--slot4-accent-fill);
+  color: var(--slot4-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.article-content ul,
+.article-content ol {
+  padding-left: 1.25rem;
+}
+
+.article-content blockquote {
+  border-left: 3px solid var(--slot4-accent);
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  color: var(--slot4-muted-text);
+  font-style: italic;
 }
