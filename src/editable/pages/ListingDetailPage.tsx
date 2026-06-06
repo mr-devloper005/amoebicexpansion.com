@@ -11,5 +11,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 export default async function ListingDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  // Shared detail route keeps the redesigned layout centralized.
   return <EditableTaskDetailRoute task="listing" params={params} />
 }

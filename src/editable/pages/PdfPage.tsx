@@ -11,6 +11,7 @@ export async function PdfPageTaskPage({
   searchParams?: Promise<{ category?: string; page?: string }>
   basePath?: string
 }) {
+  // Shared archive route keeps the redesigned layout centralized.
   return <EditableTaskArchiveRoute task="pdf" searchParams={searchParams} basePath={basePath} />
 }
 
