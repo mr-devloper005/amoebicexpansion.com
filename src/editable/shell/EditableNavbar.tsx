@@ -14,10 +14,7 @@ export function EditableNavbar() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
   const { session, logout } = useEditableLocalAuthSession()
-  const navItems = useMemo(
-    () => SITE_CONFIG.tasks.filter((task) => task.enabled).map((task) => ({ label: task.label, href: task.route })),
-    []
-  )
+  const navItems = useMemo(() => globalContent.nav.primaryLinks, [])
 
   const navVars = {
     '--editable-nav-bg': '#fbfaf7',
@@ -73,7 +70,7 @@ export function EditableNavbar() {
             <input
               name="q"
               type="search"
-              placeholder="Search the document archive"
+              placeholder="Search ideas and stories"
               className="min-w-0 flex-1 bg-transparent text-sm font-bold outline-none placeholder:text-[var(--editable-nav-muted)]"
             />
           </label>
@@ -124,7 +121,7 @@ export function EditableNavbar() {
           <form action="/search" className="mb-4">
             <label className="flex items-center gap-3 rounded-[1.4rem] border border-[var(--editable-nav-line)] bg-white px-4 py-3">
               <Search className="h-4 w-4 text-[var(--editable-nav-muted)]" />
-              <input name="q" type="search" placeholder="Search the archive" className="min-w-0 flex-1 bg-transparent text-sm font-bold outline-none" />
+              <input name="q" type="search" placeholder="Search ideas and stories" className="min-w-0 flex-1 bg-transparent text-sm font-bold outline-none" />
             </label>
           </form>
           <div className="grid gap-2">

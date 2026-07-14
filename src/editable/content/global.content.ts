@@ -3,35 +3,32 @@ import { slot4BrandConfig } from '@/editable/theme/brand.config'
 export const globalContent = {
   site: {
     name: slot4BrandConfig.siteName,
-    tagline: slot4BrandConfig.tagline || 'A premium home for polished documents and useful reading.',
+    tagline: slot4BrandConfig.tagline || 'Ideas that grow, connect, and take new shape.',
     domain: slot4BrandConfig.domain,
     baseUrl: slot4BrandConfig.baseUrl,
   },
   nav: {
     tagline: '',
     primaryLinks: [
-      { label: 'Library', href: '/pdf' },
-      { label: 'Articles', href: '/article' },
-      { label: 'Visuals', href: '/image' },
+      { label: 'Explore', href: '/search' },
       { label: 'Contact', href: '/contact' },
     ],
     actions: {
-      primary: { label: 'Browse the library', href: '/pdf' },
+      primary: { label: 'Start exploring', href: '/search' },
       secondary: { label: 'Get in touch', href: '/contact' },
     },
   },
   footer: {
-    tagline: 'Editorial discovery for documents, resources, and visual reading.',
+    tagline: '',
     description:
-      'Discover PDFs, articles, image-led posts, bookmarks, profiles, and listings through a calmer platform inspired by premium publishing systems.',
+      'Follow thoughtful stories and fresh perspectives across creativity, culture, technology, and the changing world around us.',
     columns: [
       {
         title: 'Browse',
         links: [
-          { label: 'PDF Library', href: '/pdf' },
-          { label: 'Articles', href: '/article' },
-          { label: 'Images', href: '/image' },
-          { label: 'Bookmarks', href: '/sbm' },
+          { label: 'Explore', href: '/search' },
+          { label: 'About', href: '/about' },
+          { label: 'Contact', href: '/contact' },
         ],
       },
       {
@@ -43,7 +40,7 @@ export const globalContent = {
         ],
       },
     ],
-    bottomNote: 'Built for thoughtful reading, polished archives, and connected discovery.',
+    bottomNote: 'Stay curious. Follow the unexpected connection.',
   },
   commonLabels: {
     readMore: 'Read more',
