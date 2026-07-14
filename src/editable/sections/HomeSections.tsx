@@ -26,10 +26,6 @@ type HomeSectionProps = {
   timeSections: HomeTimeSection[]
 }
 
-function taskLabel(task: TaskKey) {
-  return SITE_CONFIG.tasks.find((item) => item.key === task)?.label || task
-}
-
 function Rail({ children, className = '' }: { children: ReactNode; className?: string }) {
   return <div className={`${dc.layout.rail} ${className}`}>{children}</div>
 }
@@ -80,11 +76,11 @@ export function EditableHomeHero({ primaryTask, primaryRoute, posts }: HomeSecti
           <h1 className="font-serif text-4xl font-black leading-[0.95] tracking-[-0.05em] sm:text-6xl lg:text-[5.2rem]">{heroTitle}</h1>
           <p className="mx-auto mt-6 max-w-4xl text-base leading-8 text-white/82 sm:text-lg">{pagesContent.home.hero.description}</p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <Link href={primaryRoute} className="inline-flex items-center gap-2 rounded-full bg-[#17222d] px-7 py-4 text-sm font-black uppercase tracking-[0.14em] text-white">
-              Browse {taskLabel(primaryTask)} <ArrowRight className="h-4 w-4" />
+            <Link href={pagesContent.home.hero.primaryCta.href} className="inline-flex items-center gap-2 rounded-full bg-[#17222d] px-7 py-4 text-sm font-black uppercase tracking-[0.14em] text-white">
+              {pagesContent.home.hero.primaryCta.label} <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link href="/search" className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-7 py-4 text-sm font-black uppercase tracking-[0.14em] text-white">
-              Search archive
+            <Link href={pagesContent.home.hero.secondaryCta.href} className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-7 py-4 text-sm font-black uppercase tracking-[0.14em] text-white">
+              {pagesContent.home.hero.secondaryCta.label}
             </Link>
           </div>
         </div>
@@ -104,22 +100,22 @@ export function EditableHomeHero({ primaryTask, primaryRoute, posts }: HomeSecti
             {[
               {
                 title: 'Authors & Collectors',
-                body: 'Build polished shelves of reports, guides, manuals, and public documents with strong editorial framing.',
+                body: 'Follow thoughtful stories and original perspectives shaped by restless curiosity.',
                 tone: 'bg-white',
               },
               {
                 title: 'Studios & Startups',
-                body: 'Present practical files, pitch decks, and downloadable assets through a cleaner discovery flow.',
+                body: 'Discover emerging ideas at the meeting point of creativity, culture, and technology.',
                 tone: 'bg-[#5b54d5] text-white',
               },
               {
                 title: 'Libraries & Brands',
-                body: 'Organize categories, archive cues, and collection highlights for larger publishing systems.',
+                body: 'Find useful connections across disciplines, communities, and changing points of view.',
                 tone: 'bg-[#d7dcfb]',
               },
               {
-                title: 'Enterprise Archives',
-                body: 'Scale document presentation, reference materials, and resource browsing with premium structure.',
+                title: 'Curious Minds',
+                body: 'Make room for questions, experiments, and ideas that continue to evolve over time.',
                 tone: 'bg-[#17222d] text-white',
               },
             ].map((card) => (
@@ -185,14 +181,14 @@ export function EditableMagazineSplit({ primaryTask, primaryRoute, posts }: Home
             <div className="grid gap-8 lg:grid-cols-[0.9fr_1.6fr] lg:items-start">
               <div className="max-w-xl">
                 <p className={`${dc.type.eyebrow} ${pal.accentText}`}>How it works</p>
-                <h2 className="mt-4 font-serif text-4xl font-black tracking-[-0.04em]">A cleaner path from discovery to document reading</h2>
+                <h2 className="mt-4 font-serif text-4xl font-black tracking-[-0.04em]">A more open path from curiosity to discovery</h2>
               </div>
               <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
                 {[
-                  ['Upload', 'Add polished PDFs, visuals, summaries, and metadata so the archive can present each entry clearly.'],
-                  ['Browse', 'Move through topic shelves, feature cards, and search-driven collections without losing context.'],
-                  ['Read', 'Open long-form stories, document previews, and related resources through one connected editorial system.'],
-                  ['Return', 'Keep exploring through related panels, archive rails, and carefully varied card styles.'],
+                  ['Notice', 'Begin with a question, a pattern, or an unexpected detail worth examining more closely.'],
+                  ['Explore', 'Move across subjects and perspectives while keeping the wider context in view.'],
+                  ['Connect', 'See how distant ideas can inform one another and reveal something genuinely new.'],
+                  ['Expand', 'Carry the thought forward, revisit it later, and let it continue to change shape.'],
                 ].map(([title, copy]) => (
                   <div key={title} className="rounded-[1.6rem] bg-[var(--slot4-warm)] p-5">
                     <h3 className="text-2xl font-black tracking-[-0.03em]">{title}</h3>
@@ -218,7 +214,7 @@ export function EditableTimeCollections({ primaryTask, primaryRoute, posts, time
       <div className="mx-auto max-w-[var(--editable-container)] px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.84fr_1.16fr] lg:items-end">
           <div>
-            <p className={`${dc.type.eyebrow} ${pal.accentText}`}>Curated for document lovers</p>
+            <p className={`${dc.type.eyebrow} ${pal.accentText}`}>Curated for curious minds</p>
             <h2 className={dc.type.sectionTitle}>Search-first tools, category blocks, and editorial picks in one view</h2>
             <p className={`mt-5 max-w-xl text-base leading-8 ${pal.mutedText}`}>
               Everything is arranged to feel deliberate: a strong search lane, quick topics, featured shelves, and companion reading instead of one repeating feed.
@@ -270,8 +266,8 @@ export function EditableTimeCollections({ primaryTask, primaryRoute, posts, time
                   <FileText className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-sm font-black">Archive ready</p>
-                  <p className="text-sm text-white/64">Built to support missing images, summary fallbacks, and category-safe rendering.</p>
+                  <p className="text-sm font-black">Always evolving</p>
+                  <p className="text-sm text-white/64">New perspectives create fresh paths through the ideas already in view.</p>
                 </div>
               </div>
             </div>

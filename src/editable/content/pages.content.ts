@@ -3,24 +3,24 @@ import { slot4BrandConfig } from '@/editable/theme/brand.config'
 export const pagesContent = {
   home: {
     metadata: {
-      title: 'Premium PDF discovery and document reading',
-      description: 'Explore PDFs, guides, reference files, and connected editorial content through a polished library-style experience.',
-      openGraphTitle: 'Premium PDF discovery and document reading',
-      openGraphDescription: 'Discover documents, guides, and editorial resources through a premium archive-inspired interface.',
-      keywords: ['pdf library', 'document archive', 'premium reading platform', 'reference documents'],
+      title: 'Ideas that grow, connect, and take new shape',
+      description: 'Explore thoughtful stories, emerging ideas, and creative perspectives from Amoebic Expansion.',
+      openGraphTitle: 'Ideas that grow, connect, and take new shape',
+      openGraphDescription: 'A living collection of thoughtful stories, emerging ideas, and creative perspectives.',
+      keywords: ['ideas', 'culture', 'creativity', 'discovery', 'Amoebic Expansion'],
     },
     hero: {
-      badge: 'Document publishing technology for modern readers',
-      title: ['Global document discovery for', 'PDF lovers, archive builders, and classic readers.'],
+      badge: 'Curiosity without fixed boundaries',
+      title: ['Ideas expand.', 'Perspectives evolve.'],
       description:
-        'Browse polished PDFs, timeless guides, visual references, and supporting resources through a reading-first platform inspired by premium publishing experiences.',
-      primaryCta: { label: 'Browse the PDF library', href: '/pdf' },
-      secondaryCta: { label: 'Search the archive', href: '/search' },
-      searchPlaceholder: 'Search reports, handbooks, guides, and public documents',
+        'Amoebic Expansion follows compelling ideas as they grow, connect, and take unexpected forms across creativity, culture, technology, and everyday life.',
+      primaryCta: { label: 'Start exploring', href: '/search' },
+      secondaryCta: { label: 'About us', href: '/about' },
+      searchPlaceholder: 'Search ideas, stories, and perspectives',
       focusLabel: 'Featured',
       featureCardBadge: 'editorial selection',
       featureCardTitle: 'A homepage shaped like a curated publishing platform.',
-      featureCardDescription: 'Large headlines, discovery rails, guided categories, and rich document cards keep the archive feeling elevated.',
+      featureCardDescription: 'Large headlines, guided themes, and varied perspectives make exploration feel open and engaging.',
     },
     intro: {
       badge: 'Why it works',
@@ -42,10 +42,10 @@ export const pagesContent = {
     },
     cta: {
       badge: 'Start browsing',
-      title: 'Explore documents, stories, and references through one elegant archive.',
+      title: 'Explore ideas, stories, and perspectives that keep moving outward.',
       description:
-        'Move from featured PDFs to topic collections, visual inspiration, supporting articles, and contact lanes without leaving the editorial flow.',
-      primaryCta: { label: 'Browse PDFs', href: '/pdf' },
+        'Follow a question, discover an unexpected connection, and find a fresh way to look at the world around you.',
+      primaryCta: { label: 'Start exploring', href: '/search' },
       secondaryCta: { label: 'Contact us', href: '/contact' },
     },
     taskSection: {
@@ -54,25 +54,25 @@ export const pagesContent = {
     },
   },
   about: {
-    badge: 'About the Archive',
-    title: 'A reading-first document archive built for clean discovery.',
-    description: `${slot4BrandConfig.siteName} is designed around PDFs, guides, reference files, and archive-style browsing so readers can move through practical material with clarity and confidence.`,
+    badge: 'About us',
+    title: 'A place for ideas that refuse to stay still.',
+    description: `${slot4BrandConfig.siteName} is an independent space for curiosity, connection, and discovery—following ideas as they change shape and lead somewhere new.`,
     paragraphs: [
-      'The site treats documents like a curated collection instead of a plain list of downloads, using strong hierarchy, calm spacing, and connected navigation to keep reading comfortable.',
-      'From featured PDFs and topic shelves to search, related content, and supporting pages, every section is organized to help visitors find useful material faster.',
+      'Our name reflects the way curiosity moves: outward, organically, and without a rigid path. We bring together thoughtful stories and perspectives from creativity, culture, technology, and the changing world around us.',
+      'We value clear thinking, surprising connections, and work that gives readers room to pause, question, and see familiar subjects differently.',
     ],
     values: [
       {
-        title: 'Document-led structure',
-        description: 'PDFs, resources, and reference files are presented with clear labels, strong headlines, and archive cues that make the collection easier to scan.',
+        title: 'Curiosity first',
+        description: 'We begin with questions worth following and stay open to where the exploration leads.',
       },
       {
-        title: 'Cleaner discovery flow',
-        description: 'Search, category blocks, related entries, and featured rails work together so readers can keep moving without losing context.',
+        title: 'Unexpected connections',
+        description: 'The most interesting ideas often live between subjects, disciplines, and points of view.',
       },
       {
-        title: 'Editorial presentation',
-        description: 'Typography, spacing, and card rhythm are tuned to give practical files a premium publishing feel across desktop and mobile.',
+        title: 'Room to expand',
+        description: 'We make space for thoughtful work to develop, evolve, and spark a new line of inquiry.',
       },
     ],
   },
